@@ -13,6 +13,13 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".editProfile"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".game_stats"
             android:exported="false">
             <meta-data
@@ -54,10 +61,8 @@
                 android:value="" />
         </activity>
         <activity android:name=".signIn" />
-        <activity
-            android:name=".signUp" />
-        <activity
-            android:name=".home_screen" />
+        <activity android:name=".signUp" />
+        <activity android:name=".home_screen" />
     </application>
 
 </manifest>

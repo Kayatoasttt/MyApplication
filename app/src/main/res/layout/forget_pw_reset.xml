@@ -86,12 +86,25 @@
             android:id="@+id/logo"
             android:layout_width="234dp"
             android:layout_height="209dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="44dp"
+            android:contentDescription="@string/app_logo"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/gg_logo"
-            android:contentDescription="@string/app_logo"/>
+            app:srcCompat="@drawable/gg_logo" />
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="51dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/back_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_arrow" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

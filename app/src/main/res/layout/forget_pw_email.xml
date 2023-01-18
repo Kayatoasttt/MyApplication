@@ -30,47 +30,16 @@
             app:backgroundTint="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.759" />
-
-        <TextView
-            android:id="@+id/signUpTxt"
-            android:layout_width="80dp"
-            android:layout_height="27dp"
-            android:layout_marginEnd="60dp"
-            android:layout_marginBottom="125dp"
-            android:clickable="true"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/pw_reset_email_btn2"
-            android:textColor="#3535F6"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textView3"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-
-            android:layout_marginStart="56dp"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="sans-serif-medium"
-            android:text="@string/pw_reset_email_text3"
-            android:textColor="#838282"
-            app:layout_constraintBaseline_toBaselineOf="@+id/signUpTxt"
-            app:layout_constraintEnd_toStartOf="@+id/signUpTxt"
-            app:layout_constraintHorizontal_chainStyle="packed"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintVertical_bias="0.818" />
 
         <EditText
             android:id="@+id/inputEmail"
             android:layout_width="342dp"
             android:layout_height="49dp"
-            android:layout_marginTop="340dp"
+            android:layout_marginTop="392dp"
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/pw_reset_email_inputText"
@@ -78,7 +47,7 @@
             android:textColorHint="#838282"
             app:backgroundTint="#8A56AC"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintHorizontal_bias="0.49"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/logo" />
 
@@ -86,14 +55,15 @@
             android:id="@+id/instruction2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
+            android:layout_marginStart="24dp"
             android:layout_marginBottom="438dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/pw_reset_email_text1"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/instruction1"
-            app:layout_constraintTop_toBottomOf="@+id/logo" />
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:layout_constraintVertical_bias="0.452" />
 
         <ImageView
             android:id="@+id/logo"
@@ -101,20 +71,20 @@
             android:layout_height="0dp"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="56dp"
+            android:contentDescription="@string/app_logo"
             app:layout_constraintBottom_toTopOf="@+id/instruction1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.03"
-            app:srcCompat="@drawable/gg_logo"
-            android:contentDescription="@string/app_logo"/>
+            app:srcCompat="@drawable/gg_logo" />
 
         <TextView
             android:id="@+id/instruction1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
+            android:layout_marginStart="24dp"
             android:layout_marginBottom="435dp"
             android:fontFamily="sans-serif-medium"
             android:text="@string/pw_reset_email_text2"
@@ -122,6 +92,18 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="51dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/back_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_arrow" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

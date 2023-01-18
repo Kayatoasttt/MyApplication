@@ -7,6 +7,8 @@
     <string name="menu_icon">Menu Icon</string>
     <string name="cross_icon">Cross Icon</string>
     <string name="ml_logo">ML Logo</string>
+    <string name="profile_dp_blank">Blank Profile Picture</string>
+    <string name="back_arrow">Back Arrow</string>
 
 
     // game_stats.xml
@@ -32,6 +34,12 @@
     <string name="pw_reset_reset_inputText2">Confirm Password</string>
     <string name="pw_reset_reset_btn">CONTINUE</string>
 
+
+    // edit_profile.xml
+    <string name="edit_profile_inputText1">Username</string>
+    <string name="edit_profile_inputText2">Age</string>
+    <string name="edit_profile_inputText3">Gender</string>
+    <string name="edit_profile_inputText4">Country</string>
 
 
 </resources>
