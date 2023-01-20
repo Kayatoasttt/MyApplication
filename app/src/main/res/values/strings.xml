@@ -1,3 +1,46 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">GamersGuild</string>
+
+    // misc
+    <string name="app_logo">App Logo</string>
+    <string name="reset_check_icon">Reset Check Image</string>
+    <string name="menu_icon">Menu Icon</string>
+    <string name="cross_icon">Cross Icon</string>
+    <string name="ml_logo">ML Logo</string>
+    <string name="profile_dp_blank">Blank Profile Picture</string>
+    <string name="back_arrow">Back Arrow</string>
+
+
+    // game_stats.xml
+    <string name="game_text">Mobile Legend</string>
+    <string name="game_rank">Master</string>
+
+    // forget_pw_confirm.xml
+    <string name="pw_reset_confirm_text1">Password has been reset</string>
+    <string name="pw_reset_confirm_text2">Please sign in with your new password</string>
+    <string name="pw_reset_confirm_btn">Sign In</string>
+
+    // forget_pw_email.xml
+    <string name="pw_reset_email_text1">We will send you a link to reset your password</string>
+    <string name="pw_reset_email_text2">Enter the email address associated with your account</string>
+    <string name="pw_reset_email_inputText">Email</string>
+    <string name="pw_reset_email_btn1">CONTINUE</string>
+    <string name="pw_reset_email_text3">Don\'t have an account?</string>
+    <string name="pw_reset_email_btn2">Sign up</string>
+
+    // forget_pw_reset.xml
+    <string name="pw_reset_reset_text1">Reset Password</string>
+    <string name="pw_reset_reset_inputText1">Password</string>
+    <string name="pw_reset_reset_inputText2">Confirm Password</string>
+    <string name="pw_reset_reset_btn">CONTINUE</string>
+
+
+    // edit_profile.xml
+    <string name="edit_profile_inputText1">Username</string>
+    <string name="edit_profile_inputText2">Age</string>
+    <string name="edit_profile_inputText3">Gender</string>
+    <string name="edit_profile_inputText4">Country</string>
+    <string name="edit_profile_inputText5">About Me</string>
+
+
 </resources>

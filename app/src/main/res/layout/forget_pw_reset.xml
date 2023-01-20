@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".forgetPwReset">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#132641"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:context=".signIn"
+        android:inputType="textPassword">
+
+        <TextView
+            android:id="@+id/instruction3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="438dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/pw_reset_reset_text1"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            app:layout_constraintVertical_bias="0.346" />
+
+        <EditText
+            android:id="@+id/inputConfirmPassword"
+            android:layout_width="342dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="400dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/pw_reset_reset_inputText2"
+            android:textColorHint="#838282"
+            app:backgroundTint="#8A56AC"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/logo"
+            android:inputType="textPassword"/>
+
+        <Button
+            android:id="@+id/continueBtn"
+            android:layout_width="328dp"
+            android:layout_height="52dp"
+            android:background="@drawable/active_signin"
+            android:backgroundTint="#8A56AC"
+            android:text="@string/pw_reset_reset_btn"
+            android:textColor="@color/white"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.493"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.823" />
+
+        <EditText
+            android:id="@+id/inputPassword"
+            android:layout_width="342dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="312dp"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/pw_reset_reset_inputText1"
+            android:textColorHint="#838282"
+            app:backgroundTint="#8A56AC"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/logo"
+            android:inputType="textPassword"/>
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="234dp"
+            android:layout_height="209dp"
+            android:layout_marginTop="44dp"
+            android:contentDescription="@string/app_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/gg_logo" />
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="51dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/back_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_arrow" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
