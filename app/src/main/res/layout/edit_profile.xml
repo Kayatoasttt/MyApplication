@@ -4,123 +4,177 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#132641"
     tools:context=".editProfile">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-<!--    <ScrollView-->
-<!--        android:id="@+id/constraintLayout2"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="0dp"-->
-<!--        android:background="#132641"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        tools:context=".signIn">-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- elements you want to make scrollable go here -->
+            <ImageButton
+                android:id="@+id/menuBtn2"
+                android:layout_width="47dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="28dp"
+                android:adjustViewBounds="true"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/white_menu_icon"
+                android:contentDescription="@string/menu_icon"/>
 
 
-<!--        <EditText-->
-<!--            android:id="@+id/inputGender"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_marginBottom="13dp"-->
-<!--            android:autofillHints=""-->
-<!--            android:ems="10"-->
-<!--            android:hint="@string/edit_profile_inputText3"-->
-<!--            android:inputType="text"-->
-<!--            android:textColorHint="#838282"-->
-<!--            app:backgroundTint="#8A56AC"-->
-<!--            app:layout_constraintBottom_toTopOf="@+id/inputCountry"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/inputCountry"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/inputCountry"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/inputAge" />-->
+            <ImageView
+                android:id="@+id/profile_dp"
+                android:layout_width="317dp"
+                android:layout_height="163dp"
+                android:contentDescription="@string/profile_dp_blank"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/profile_dp_blank" />
 
-<!--        <EditText-->
-<!--            android:id="@+id/inputUsername"-->
-<!--            android:layout_width="351dp"-->
-<!--            android:layout_height="82dp"-->
-<!--            android:layout_marginBottom="388dp"-->
-<!--            android:autofillHints=""-->
-<!--            android:ems="10"-->
-<!--            android:hint="@string/edit_profile_inputText1"-->
-<!--            android:inputType="textPersonName"-->
-<!--            android:textColorHint="#838282"-->
-<!--            app:backgroundTint="#8A56AC"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/inputAge"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/inputAge"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/profile_dp_blank" />-->
 
-<!--        <ImageView-->
-<!--            android:id="@+id/profile_dp_blank"-->
-<!--            android:layout_width="208dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_gravity="center"-->
-<!--            android:layout_marginTop="75dp"-->
-<!--            android:layout_marginBottom="30dp"-->
-<!--            android:contentDescription="@string/profile_dp_blank"-->
-<!--            app:layout_constraintBottom_toTopOf="@+id/inputUsername"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:srcCompat="@drawable/profile_dp_blank" />-->
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/edit_profile_inputText1"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
 
-<!--        <ImageButton-->
-<!--            android:id="@+id/menuBtn3"-->
-<!--            android:layout_width="47dp"-->
-<!--            android:layout_height="121dp"-->
-<!--            android:layout_marginStart="32dp"-->
 
-<!--            android:layout_marginTop="10dp"-->
-<!--            android:layout_marginEnd="27dp"-->
-<!--            android:layout_marginBottom="100dp"-->
-<!--            android:adjustViewBounds="true"-->
-<!--            android:background="@null"-->
-<!--            android:contentDescription="@string/menu_icon"-->
-<!--            android:scaleType="fitCenter"-->
-<!--            app:layout_constraintBottom_toTopOf="@+id/inputUsername"-->
-<!--            app:layout_constraintEnd_toStartOf="@+id/profile_dp_blank"-->
-<!--            app:layout_constraintHorizontal_bias="1.0"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:layout_constraintVertical_bias="0.0"-->
-<!--            app:srcCompat="@drawable/white_menu_icon"-->
-<!--            tools:ignore="TouchTargetSizeCheck" />-->
+            <EditText
+                android:id="@+id/editUserName"
+                android:layout_width="342dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="05dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/edit_profile_inputText1"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#838282"
+                app:backgroundTint="#8A56AC" />
 
-<!--        <EditText-->
-<!--            android:id="@+id/inputAge"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_marginBottom="13dp"-->
-<!--            android:autofillHints=""-->
-<!--            android:ems="10"-->
-<!--            android:hint="@string/edit_profile_inputText2"-->
-<!--            android:inputType="text|number"-->
-<!--            android:textColorHint="#838282"-->
-<!--            app:backgroundTint="#8A56AC"-->
-<!--            app:layout_constraintBottom_toTopOf="@+id/inputGender"-->
-<!--            app:layout_constraintEnd_toEndOf="@+id/inputGender"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/inputGender"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/inputUsername" />-->
 
-<!--        <EditText-->
-<!--            android:id="@+id/inputCountry"-->
-<!--            android:layout_width="350dp"-->
-<!--            android:layout_height="0dp"-->
-<!--            android:layout_marginBottom="190dp"-->
-<!--            android:autofillHints=""-->
-<!--            android:ems="10"-->
-<!--            android:hint="@string/edit_profile_inputText4"-->
-<!--            android:inputType="text"-->
-<!--            android:textColorHint="#838282"-->
-<!--            app:backgroundTint="#8A56AC"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintHorizontal_bias="0.573"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/inputGender" />-->
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/edit_profile_inputText2"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
 
-<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
-<!--    </ScrollView>-->
 
+            <EditText
+                android:id="@+id/editAge"
+                android:layout_width="342dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="05dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/edit_profile_inputText2"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#838282"
+                app:backgroundTint="#8A56AC" />
+
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/edit_profile_inputText3"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+
+            <EditText
+                android:id="@+id/editGender"
+                android:layout_width="342dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="05dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/edit_profile_inputText3"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#838282"
+                app:backgroundTint="#8A56AC" />
+
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/edit_profile_inputText4"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+
+            <EditText
+                android:id="@+id/editCountry"
+                android:layout_width="342dp"
+                android:layout_height="49dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="05dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:hint="@string/edit_profile_inputText4"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#838282"
+                app:backgroundTint="#8A56AC" />
+
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/edit_profile_inputText5"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+
+            <EditText
+                android:id="@+id/editAbout"
+                android:layout_width="342dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="05dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:textColorHint="#838282"
+                android:background="@drawable/rectangletextbox"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
