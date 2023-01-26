@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "817769647197",
+    "firebase_url": "https://andegamersguild-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "andegamersguild",
+    "storage_bucket": "andegamersguild.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817769647197:android:6853973acf11429298d1b4",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "817769647197-cl5d7mjb02bqfa4ognv5tviemq2ob1sl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNzWKajjtnyfo0KrMWX26_ULoWF_q1q8U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "817769647197-cl5d7mjb02bqfa4ognv5tviemq2ob1sl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
