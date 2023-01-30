@@ -131,11 +131,14 @@ public class signUp extends AppCompatActivity implements View.OnClickListener{
                                             }else{
                                                 Toast.makeText(signUp.this, "Registration failed. Please try again", Toast.LENGTH_LONG).show();
                                                 progressBar.setVisibility(View.GONE);
+                                                Log.d("unsuccessful signup","here1");
                                             }
                                         }
                                     });
                         }else{
-                            Log.d("onComplete: Failed=",task.getException().getMessage());
+                            inputEmail.setError(task.getException().getLocalizedMessage());
+                            inputEmail.requestFocus();
+                            return;
                         }
                     }
                 });
