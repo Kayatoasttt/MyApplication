@@ -51,7 +51,7 @@
     <Button
         android:id="@+id/signUpToggleButton"
         android:layout_width="120dp"
-        android:layout_height="35dp"
+        android:layout_height="39dp"
         android:background="@drawable/inactive_signin"
         android:text="Sign Up"
         android:textColor="#8A56AC"
@@ -66,7 +66,7 @@
     <Button
         android:id="@+id/signInToggleBtn"
         android:layout_width="150dp"
-        android:layout_height="36dp"
+        android:layout_height="39dp"
         android:background="@drawable/active_signin"
         android:backgroundTint="#8A56AC"
         android:text="Sign In"
@@ -74,10 +74,10 @@
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.414" />
+        app:layout_constraintVertical_bias="0.413" />
 
     <EditText
         android:id="@+id/inputPassword"
