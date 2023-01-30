@@ -9,7 +9,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,6 +18,11 @@
             android:orientation="vertical">
 
             <!-- elements you want to make scrollable go here -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
             <ImageButton
                 android:id="@+id/menuBtn2"
                 android:layout_width="47dp"
@@ -31,17 +37,30 @@
                 app:srcCompat="@drawable/white_menu_icon"
                 android:contentDescription="@string/menu_icon"/>
 
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="210dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="Save"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </LinearLayout>
 
             <ImageView
                 android:id="@+id/profile_dp"
-                android:layout_width="317dp"
-                android:layout_height="163dp"
+                android:layout_width="450px"
+                android:layout_height="450px"
+                android:layout_gravity="center"
                 android:contentDescription="@string/profile_dp_blank"
+                android:scaleType="centerCrop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                android:layout_gravity="center"
                 app:srcCompat="@drawable/profile_dp_blank" />
 
 
@@ -163,13 +182,18 @@
 
             <EditText
                 android:id="@+id/editAbout"
-                android:layout_width="342dp"
-                android:layout_height="100dp"
-                android:layout_marginStart="24dp"
-                android:layout_marginTop="05dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:padding="20dp"
                 android:autofillHints=""
                 android:ems="10"
-                android:inputType="textEmailAddress"
+                android:textColor="@color/white"
+                android:inputType="textMultiLine"
                 android:textColorHint="#838282"
                 android:background="@drawable/rectangletextbox"/>
 
