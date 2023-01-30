@@ -15,7 +15,7 @@ public class signIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.signin);
 
-        Button signUpBtn = (Button)findViewById(R.id.signIn);
+        Button signUpBtn = (Button)findViewById(R.id.signUpToggleButton);
 
         signUpBtn.setOnClickListener(new View.OnClickListener() {
 
@@ -37,7 +37,8 @@ public class signIn extends AppCompatActivity {
         afterSignInbtn.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                startActivity(new Intent(signIn.this, editProfile.class));
+                startActivity(new Intent(signIn.this, home_screen
+                        .class));
             }
         });
     }
