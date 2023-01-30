@@ -10,9 +10,13 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
@@ -32,6 +36,9 @@ public class editProfile extends AppCompatActivity {
 
     private Button saveBtn;
     private ImageView profile_dp;
+    private EditText aboutMe;
+    private TextView aboutMeCharCount;
+    private  int mCharacterLimit = 300;
 
     private Uri imagePath;
 
@@ -43,13 +50,42 @@ public class editProfile extends AppCompatActivity {
         profile_dp = findViewById(R.id.profile_dp);
         saveBtn = findViewById(R.id.saveBtn);
 
+        aboutMe = findViewById(R.id.editAbout);
+        aboutMeCharCount = findViewById(R.id.aboutMeWordCount);
+
+
+        // Display the about me character count
+        aboutMe.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                int currentCharacterCount = s.length();
+                aboutMeCharCount.setText("Character count: " + currentCharacterCount + "/" + mCharacterLimit);
+                if (currentCharacterCount > mCharacterLimit) {
+                    aboutMe.setError("Exceeded character limit of " + mCharacterLimit);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+
         // Display the profile picture
         getProfilePicture();
 
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                uploadImage();
+                if (imagePath != null) {
+                    uploadImage();
+                } else {
+                    // update the other stuff
+
+                }
             }
         });
 
@@ -62,6 +98,7 @@ public class editProfile extends AppCompatActivity {
             }
         });
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -135,5 +172,6 @@ public class editProfile extends AppCompatActivity {
             }
         });
     }
+
 
 }

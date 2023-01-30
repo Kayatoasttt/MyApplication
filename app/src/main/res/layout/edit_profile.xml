@@ -84,6 +84,7 @@
                 android:layout_marginTop="05dp"
                 android:autofillHints=""
                 android:ems="10"
+                android:textColor="@color/white"
                 android:hint="@string/edit_profile_inputText1"
                 android:inputType="textEmailAddress"
                 android:textColorHint="#838282"
@@ -111,6 +112,7 @@
                 android:autofillHints=""
                 android:ems="10"
                 android:hint="@string/edit_profile_inputText2"
+                android:textColor="@color/white"
                 android:inputType="textEmailAddress"
                 android:textColorHint="#838282"
                 app:backgroundTint="#8A56AC" />
@@ -136,6 +138,7 @@
                 android:layout_marginTop="05dp"
                 android:autofillHints=""
                 android:ems="10"
+                android:textColor="@color/white"
                 android:hint="@string/edit_profile_inputText3"
                 android:inputType="textEmailAddress"
                 android:textColorHint="#838282"
@@ -161,6 +164,7 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="05dp"
                 android:autofillHints=""
+                android:textColor="@color/white"
                 android:ems="10"
                 android:hint="@string/edit_profile_inputText4"
                 android:inputType="textEmailAddress"
@@ -188,7 +192,6 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
                 android:padding="20dp"
                 android:autofillHints=""
                 android:ems="10"
@@ -196,6 +199,15 @@
                 android:inputType="textMultiLine"
                 android:textColorHint="#838282"
                 android:background="@drawable/rectangletextbox"/>
+
+            <TextView
+                android:id="@+id/aboutMeWordCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:gravity="right"
+                android:layout_marginRight="25dp" />
+
 
 
         </LinearLayout>
