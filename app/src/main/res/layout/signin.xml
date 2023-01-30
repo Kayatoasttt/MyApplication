@@ -49,7 +49,7 @@
 
 
     <Button
-        android:id="@+id/signUpBtn"
+        android:id="@+id/signUpToggleButton"
         android:layout_width="120dp"
         android:layout_height="35dp"
         android:background="@drawable/inactive_signin"
@@ -64,7 +64,7 @@
         app:layout_constraintVertical_bias="0.413" />
 
     <Button
-        android:id="@+id/signInBtn"
+        android:id="@+id/signInToggleBtn"
         android:layout_width="150dp"
         android:layout_height="36dp"
         android:background="@drawable/active_signin"
@@ -85,6 +85,7 @@
         android:layout_height="46dp"
         android:ems="10"
         android:hint="Password"
+        android:textColor="@color/white"
         android:inputType="textPassword"
         android:textColorHint="@color/white"
         app:backgroundTint="#8A56AC"
@@ -100,6 +101,7 @@
         android:layout_height="45dp"
         android:ems="10"
         android:hint="Email"
+        android:textColor="@color/white"
         android:inputType="textEmailAddress"
         android:textColorHint="@color/white"
         app:backgroundTint="#8A56AC"
@@ -120,6 +122,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signIn"
         app:layout_constraintVertical_bias="0.283" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
