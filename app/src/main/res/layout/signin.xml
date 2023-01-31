@@ -50,7 +50,7 @@
 
     <Button
         android:id="@+id/signUpToggleButton"
-        android:layout_width="120dp"
+        android:layout_width="124dp"
         android:layout_height="39dp"
         android:background="@drawable/inactive_signin"
         android:text="Sign Up"
@@ -58,7 +58,7 @@
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintHorizontal_bias="0.749"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.413" />

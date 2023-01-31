@@ -25,6 +25,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/white_menu_icon" />
 
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView

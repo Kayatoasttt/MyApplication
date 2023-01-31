@@ -42,10 +42,37 @@ public class home_screen extends AppCompatActivity {
 
         NavigationView navigationView = findViewById(R.id.menuNav);
         navigationView.setItemIconTintList(null);
+        navigationView.setNavigationItemSelectedListener(view -> {
+            String selectedView = (String) view.getTitle();
+            Log.d(TAG, selectedView +"heree");
+            switch (selectedView) {
+                case "Home":
+                    startActivity(new Intent(this, home_screen.class));
+                    break;
+                case "Conversations":
+                    startActivity(new Intent(this, messages.class));
+                    break;
+                case "Notifications":
+                    startActivity(new Intent(this, notifications.class));
+                    break;
+                case "Settings":
+                    startActivity(new Intent(this, settings.class));
+                    break;
+                default:
+                    break;
+            }
+
+
+            return true;
+        });
 
         getImages();
 
 
+    }
+
+    protected void onClick(View view) {
+        Log.d(TAG, view.getTransitionName());
     }
 
     private void getImages(){
