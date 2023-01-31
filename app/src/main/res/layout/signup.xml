@@ -7,12 +7,43 @@
     android:background="#132641"
     tools:context=".signIn">
 
+    <EditText
+        android:id="@+id/inputAge"
+        android:layout_width="333dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="number"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:backgroundTint="#8A56AC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.76" />
+
+
+    <Spinner
+        android:id="@+id/inputGender"
+        android:layout_width="333dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="111dp"
+        android:backgroundTint="#8A56AC"
+        android:popupBackground="@color/white"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ggLogoSignUp" />
 
     <ImageView
         android:id="@+id/ggLogoSignUp"
         android:layout_width="275dp"
-        android:layout_height="286dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="290dp"
+        app:layout_constraintBottom_toTopOf="@+id/inputGender"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -30,10 +61,10 @@
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.754"
+        app:layout_constraintHorizontal_bias="0.747"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.413" />
+        app:layout_constraintVertical_bias="0.372" />
 
     <ImageView
         android:id="@+id/toggleBorder"
@@ -41,11 +72,11 @@
         android:layout_height="39dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.413"
+        app:layout_constraintVertical_bias="0.372"
         app:srcCompat="@drawable/toggleshadow" />
+
 
     <Button
         android:id="@+id/signInToggleBtn"
@@ -58,10 +89,10 @@
         app:backgroundTint="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintHorizontal_bias="0.257"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.413" />
+        app:layout_constraintVertical_bias="0.372" />
 
     <EditText
         android:id="@+id/inputConfirmPassword"
@@ -70,15 +101,15 @@
         android:ems="10"
         android:hint="Confirm Password"
         android:inputType="textPassword"
-        android:textColorHint="@color/white"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:backgroundTint="#8A56AC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.798" />
+        app:layout_constraintVertical_bias="0.683" />
 
     <Button
         android:id="@+id/continueBtn"
@@ -94,7 +125,7 @@
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.932" />
+        app:layout_constraintVertical_bias="0.954" />
 
     <EditText
         android:id="@+id/inputPassword"
@@ -103,16 +134,15 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textColorHint="@color/white"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:backgroundTint="#8A56AC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
+        app:layout_constraintHorizontal_bias="0.423"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.703" />
-
+        app:layout_constraintVertical_bias="0.604" />
 
     <EditText
         android:id="@+id/inputEmail"
@@ -121,15 +151,15 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:textColorHint="@color/white"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:backgroundTint="#8A56AC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintHorizontal_bias="0.423"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.521" />
+        app:layout_constraintVertical_bias="0.446" />
 
     <EditText
         android:id="@+id/inputUsername"
@@ -138,15 +168,15 @@
         android:ems="10"
         android:hint="Username"
         android:inputType="textPersonName"
-        android:textColorHint="@color/white"
         android:textColor="@color/white"
+        android:textColorHint="@color/white"
         app:backgroundTint="#8A56AC"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintHorizontal_bias="0.415"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609" />
+        app:layout_constraintVertical_bias="0.524" />
 
     <ProgressBar
         android:id="@+id/progressBar"

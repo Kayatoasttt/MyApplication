@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -19,13 +22,17 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class signUp extends AppCompatActivity implements View.OnClickListener{
 
     private FirebaseAuth mAuth;
 
     private Button register;
-    private EditText inputEmail, inputUsername, inputPassword, inputConfirmPassword;
+    private EditText inputEmail, inputUsername, inputPassword, inputConfirmPassword, inputAge;
     private ProgressBar progressBar;
+    private Spinner inputGender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +52,16 @@ public class signUp extends AppCompatActivity implements View.OnClickListener{
         inputUsername = (EditText) findViewById(R.id.inputUsername);
         inputPassword = (EditText) findViewById(R.id.inputPassword);
         inputConfirmPassword = (EditText) findViewById(R.id.inputConfirmPassword);
+        inputAge = (EditText) findViewById(R.id.inputAge);
+        inputGender = (Spinner) findViewById(R.id.inputGender);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+
+        List<String> options = Arrays.asList("Male", "Female", "Other");
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, options);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        inputGender.setAdapter(adapter);
     }
 
     @Override
@@ -63,6 +78,9 @@ public class signUp extends AppCompatActivity implements View.OnClickListener{
     private void registerUser() {
         String email = inputEmail.getText().toString().trim();
         String username = inputUsername.getText().toString().trim();
+        String inputStrAge = inputAge.getText().toString().trim();
+        int age = Integer.parseInt(inputStrAge);
+        String gender = inputGender.getSelectedItem().toString().trim();
         String password = inputPassword.getText().toString().trim();
         String confirmPassword = inputConfirmPassword.getText().toString().trim();
 
@@ -108,6 +126,12 @@ public class signUp extends AppCompatActivity implements View.OnClickListener{
             return;
         }
 
+        if(age == 0){
+            inputAge.setError("Age is required");
+            inputAge.requestFocus();
+            return;
+        }
+
         progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -115,7 +139,7 @@ public class signUp extends AppCompatActivity implements View.OnClickListener{
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Log.d("UserCreate","success");
-                            User user = new User(username, email, "");
+                            User user = new User(username, age, gender, email);
 
                             FirebaseDatabase.getInstance().getReference("User")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
