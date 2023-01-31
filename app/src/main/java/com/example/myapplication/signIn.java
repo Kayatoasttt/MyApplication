@@ -37,7 +37,7 @@ public class signIn extends AppCompatActivity {
         afterSignInbtn.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                startActivity(new Intent(signIn.this, home_screen
+                startActivity(new Intent(signIn.this, editProfile
                         .class));
             }
         });

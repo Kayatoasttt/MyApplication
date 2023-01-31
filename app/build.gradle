@@ -61,4 +61,5 @@ dependencies {
 
     // Add the dependency for the Firebase Realtime Database library
     implementation 'com.google.firebase:firebase-storage'
+
 }
