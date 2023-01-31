@@ -115,7 +115,7 @@ public class signUp extends AppCompatActivity implements View.OnClickListener{
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
                             Log.d("UserCreate","success");
-                            User user = new User(username, email);
+                            User user = new User(username, email, "");
 
                             FirebaseDatabase.getInstance().getReference("User")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
