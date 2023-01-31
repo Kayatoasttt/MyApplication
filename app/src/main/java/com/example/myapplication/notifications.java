@@ -14,11 +14,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class settings extends AppCompatActivity {
+public class notifications extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.settings);
+        setContentView(R.layout.notifications);
 
         DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
         ImageButton btn = (ImageButton) findViewById(R.id.menuBtn);
@@ -51,6 +51,7 @@ public class settings extends AppCompatActivity {
                 default:
                     break;
             }
+
 
             return true;
         });

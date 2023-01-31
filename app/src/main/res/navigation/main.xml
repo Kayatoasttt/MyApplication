@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main"
-    app:startDestination="@id/home_screen">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main">
     <activity
-        android:id="@+id/home_screen"
+        android:id="@+id/homeMenu"
         android:name="com.example.myapplication.home_screen"
-        android:label="home_screen" />
+        android:label="home_screen"
+        tools:layout="@layout/newhome_screen"/>
     <activity
-        android:id="@+id/splashScreen"
-        android:name="com.example.myapplication.SplashScreen"
-        android:label="SplashScreen" />
+        android:id="@+id/msgsMenu"
+        android:name="com.example.myapplication.messages"
+        android:label="messages"
+        tools:layout="@layout/messages"/>
 </navigation>
