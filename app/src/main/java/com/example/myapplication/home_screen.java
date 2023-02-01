@@ -5,10 +5,8 @@ import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.PopupMenu;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -44,13 +42,13 @@ public class home_screen extends AppCompatActivity {
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(view -> {
             String selectedView = (String) view.getTitle();
-            Log.d(TAG, selectedView +"heree");
+            Log.d(TAG, selectedView +"here");
             switch (selectedView) {
                 case "Home":
                     startActivity(new Intent(this, home_screen.class));
                     break;
                 case "Conversations":
-                    startActivity(new Intent(this, messages.class));
+                    startActivity(new Intent(this, FriendsConversation.class));
                     break;
                 case "Notifications":
                     startActivity(new Intent(this, notifications.class));

@@ -10,7 +10,7 @@
         tools:layout="@layout/newhome_screen"/>
     <activity
         android:id="@+id/msgsMenu"
-        android:name="com.example.myapplication.messages"
+        android:name="com.example.myapplication.FriendsConversation"
         android:label="messages"
-        tools:layout="@layout/messages"/>
+        tools:layout="@layout/friends_conversation"/>
 </navigation>
