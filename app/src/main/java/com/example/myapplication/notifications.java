@@ -40,7 +40,7 @@ public class notifications extends AppCompatActivity {
                     startActivity(new Intent(this, home_screen.class));
                     break;
                 case "Conversations":
-                    startActivity(new Intent(this, messages.class));
+                    startActivity(new Intent(this, FriendsConversation.class));
                     break;
                 case "Notifications":
                     startActivity(new Intent(this, notifications.class));

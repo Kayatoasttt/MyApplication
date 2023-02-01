@@ -55,7 +55,14 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".messages"
+            android:name=".FriendsConversation"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".privateMessages"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"

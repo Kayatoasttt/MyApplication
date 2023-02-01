@@ -42,5 +42,11 @@
     <string name="edit_profile_inputText4">Country</string>
     <string name="edit_profile_inputText5">About Me</string>
 
+    // messages.xml
+    <string name="message_title">Your conversations</string>
+
+
+    // private_messages.xml
+    <string name="profile_image">Recipient Profile Picture</string>
 
 </resources>
