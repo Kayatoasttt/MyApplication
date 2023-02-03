@@ -99,7 +99,6 @@ public class FriendsConversation extends AppCompatActivity {
                         .putExtra("recipient_img", users.get(position).getProfilePicture())
                         .putExtra("sender_img", currentUserImg)
                 );
-                Toast.makeText(FriendsConversation.this, "Clicked on " + users.get(position).getEmail(), Toast.LENGTH_SHORT).show();
             }
         };
 
@@ -112,7 +111,6 @@ public class FriendsConversation extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-//                    Toast.makeText(FriendsConversation.this, "Loading..." + dataSnapshot.getValue(User.class).getEmail(), Toast.LENGTH_SHORT).show();
                     if (!dataSnapshot.getKey().equals(FirebaseAuth.getInstance().getCurrentUser().getUid())) { // won't add the current user to the list
                         users.add(dataSnapshot.getValue(User.class));
                     } else {
@@ -127,7 +125,7 @@ public class FriendsConversation extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
+                Toast.makeText(FriendsConversation.this, "Sorry we have issues in trying to fetch your friends please try again later.", Toast.LENGTH_SHORT).show();
             }
         });
     }

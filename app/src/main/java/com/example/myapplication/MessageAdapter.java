@@ -41,6 +41,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageH
     @Override
     public void onBindViewHolder(@NonNull MessageHolder holder, int position) {
         holder.txtMessage.setText(messages.get(position).getContent());
+        holder.txtDateTime.setText(messages.get(position).getDateTime());
 
         ConstraintLayout constraintLayout = holder.ccLayout;
 
@@ -53,6 +54,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageH
             constraintSet.clear(R.id.txtMessage,ConstraintSet.LEFT);
             constraintSet.connect(R.id.profileCardView,ConstraintSet.RIGHT,R.id.ccLayout,ConstraintSet.RIGHT,0);
             constraintSet.connect(R.id.txtMessage,ConstraintSet.RIGHT,R.id.profileCardView,ConstraintSet.LEFT,0);
+            constraintSet.connect(R.id.txtDateTime,ConstraintSet.RIGHT,R.id.profileCardView,ConstraintSet.LEFT,0);
             constraintSet.applyTo(constraintLayout);
         } else {
             ConstraintSet constraintSet = new ConstraintSet();
@@ -63,6 +65,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageH
             constraintSet.clear(R.id.txtMessage,ConstraintSet.RIGHT);
             constraintSet.connect(R.id.profileCardView,ConstraintSet.LEFT,R.id.ccLayout,ConstraintSet.LEFT,0);
             constraintSet.connect(R.id.txtMessage,ConstraintSet.LEFT,R.id.profileCardView,ConstraintSet.RIGHT,0);
+            constraintSet.connect(R.id.txtDateTime,ConstraintSet.LEFT,R.id.profileCardView,ConstraintSet.RIGHT,0);
             constraintSet.applyTo(constraintLayout);
         }
     }
@@ -74,7 +77,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageH
 
     class MessageHolder extends RecyclerView.ViewHolder {
         ConstraintLayout ccLayout;
-        TextView txtMessage;
+        TextView txtMessage, txtDateTime;
         ImageView profileImage;
 
         public MessageHolder(@NonNull View itemView) {
@@ -82,7 +85,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageH
             ccLayout = itemView.findViewById(R.id.ccLayout);
             txtMessage = itemView.findViewById(R.id.txtMessage);
             profileImage = itemView.findViewById(R.id.imgRecipientImage);
-
+            txtDateTime = itemView.findViewById(R.id.txtDateTime);
 
         }
     }
